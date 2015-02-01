@@ -1,0 +1,96 @@
+<?xml version = "1.0"?>
+<videostore>
+<customer>
+	<customerID>1</customerID>
+	<customerName>Alma</customerName>
+	<customerSurname>Muratovic</customerSurname>
+	<customerPhone>603171665</customerPhone>
+	<customerEmail>almamuratovic@hotmail.com</customerEmail>
+</customer>
+<customer>
+	<customerID>2</customerID>
+	<customerName>Alma1</customerName>
+	<customerSurname>Muratovic1</customerSurname>
+	<customerPhone>603171665</customerPhone>
+	<customerEmail>almamuratovic@hotmail.com</customerEmail>
+</customer>
+<customer>
+	<customerID>3</customerID>
+	<customerName>Alma2</customerName>
+	<customerSurname>Muratovic2</customerSurname>
+	<customerPhone>603171665</customerPhone>
+	<customerEmail>almamuratovic@hotmail.com</customerEmail>
+</customer>
+<employee>
+	<employeeID>1</employeeID>
+	<employeeName>Safet</employeeName>
+	<employeeSurname>Muratovic</employeeSurname>
+	<employeePhone>62966922</employeePhone>
+	<employeeEmail>safetmuratovic@gmail.com</employeeEmail>
+</employee>
+<employee>
+	<employeeID>2</employeeID>
+	<employeeName>Safet1</employeeName>
+	<employeeSurname>Muratovic1</employeeSurname>
+	<employeePhone>62966922</employeePhone>
+	<employeeEmail>safetmuratovic@gmail.com</employeeEmail>
+</employee>
+<employee>
+	<employeeID>3</employeeID>
+	<employeeName>Safet2</employeeName>
+	<employeeSurname>Muratovic2</employeeSurname>
+	<employeePhone>62966922</employeePhone>
+	<employeeEmail>safetmuratovic@gmail.com</employeeEmail>
+</employee>
+<movie>
+	<title>22JumpStreet</title>
+	<genre>comedy</genre>
+	<movieID>1</movieID>
+	<rate>4</rate>
+	<actor>
+		<actorName>Angelina</actorName>
+		<actorSurname>Jolie</actorSurname>
+	</actor>
+</movie>
+<movie>
+	<title>Mirrors</title>
+	<genre>horror</genre>
+	<movieID>2</movieID>
+	<rate>3</rate>
+	<actor>
+		<actorName>Angelina1</actorName>
+		<actorSurname>Jolie1</actorSurname>
+	</actor>
+</movie>
+<movie>
+	<title>Need for Speed</title>
+	<genre>action</genre>
+	<movieID>3</movieID>
+	<rate>5</rate>
+	<actor>
+		<actorName>Angelina2</actorName>
+		<actorSurname>Jolie2</actorSurname>
+	</actor>
+</movie>
+<rent>
+	<movieID>1</movieID>
+	<customerID>1</customerID>
+	<employeeID>1</employeeID>
+	<date>Sun Sep 05 00:00:00 CEST 3915</date>
+	<payed>true</payed>
+</rent>
+<rent>
+	<movieID>1</movieID>
+	<customerID>1</customerID>
+	<employeeID>1</employeeID>
+	<date>Sun Sep 05 00:00:00 CEST 3915</date>
+	<payed>true</payed>
+</rent>
+<rent>
+	<movieID>1</movieID>
+	<customerID>1</customerID>
+	<employeeID>1</employeeID>
+	<date>Sun Sep 05 00:00:00 CEST 3915</date>
+	<payed>true</payed>
+</rent>
+												</videostore>
