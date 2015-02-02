@@ -49,6 +49,21 @@ public class VideoStore {
 	}
 	
 	/**
+	 * deletes customer from the videoStore
+	 * @param customer Customer
+	 */
+	public void deleteCustomer(Customer customer) {
+		for(int i = 0; i < sizeCustomer; i++) {
+			if(customers[i] == customer) {
+				for(int j = i; j < sizeCustomer; j++)
+					customers[j] = customers[j + 1];
+				break;
+			}
+		}
+		sizeCustomer--;
+	}
+	
+	/**
 	 * resizes customer array
 	 */
 	private void resizeCustomer() {
@@ -56,6 +71,21 @@ public class VideoStore {
 		for(int i = 0; i < sizeCustomer; i++)
 			array[i] = customers[i];
 		customers = array;
+	}
+	
+	/**
+	 * fires the employee from the videoStore
+	 * @param employee Employee
+	 */
+	public void fireEmployee(Employee employee) {
+		for(int i = 0; i < sizeEmployee; i++) {
+			if(employees[i] == employee) {
+				for(int j = i; j < sizeEmployee; j++)
+					employees[j] = employees[j + 1];
+				break;
+			}
+		}
+		sizeEmployee--;
 	}
 	
 	/**
@@ -101,14 +131,22 @@ public class VideoStore {
 	}
 	
 	/**
-	 * adds a rented item to videostore
+	 * adds a rented item to videostore and removes movie from the movie library
 	 * @param rent Rent rented movie
 	 */
 	public void addRentedMovie(Rent rent) {
 		if(sizeRent == rentedMovies.length)
 			resizeRent();
 		rentedMovies[sizeRent] = rent;
+		for(int i = 0; i < sizeMovie; i++) {
+			if(movies[i].getMovieID() == rent.getMovieID()) {
+				for(int j = i ; j < sizeMovie; j++)
+					movies[j] = movies[j + 1];
+				break;
+			}
+		}
 		sizeRent++;
+		sizeMovie--;
 	}
 	
 	/**
@@ -119,6 +157,22 @@ public class VideoStore {
 		for(int i = 0; i < sizeRent; i++)
 			array[i] = rentedMovies[i];
 		rentedMovies = array;
+	}
+	
+	/**
+	 * returns rented movie to videoStore
+	 * @param rent Rent
+	 */
+	public void returnRentedItem(Rent rent) {
+		for(int i = 0; i < sizeRent; i++) {
+			if(rentedMovies[i] == rent) {
+				for(int j = i; j < sizeRent; j++)
+					rentedMovies[j] = rentedMovies[j + 1];
+				break;
+			}
+		}
+		sizeRent--;
+		sizeMovie++;
 	}
 	
 	/**

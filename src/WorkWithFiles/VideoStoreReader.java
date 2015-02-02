@@ -125,6 +125,7 @@ public class VideoStoreReader {
 				}
 			}
 			
+			//prints movies in the videoStore
 			Iterator<Movie> iterator = movies.iterator();
 			while(iterator.hasNext()) {
 				Movie tmp = iterator.next();

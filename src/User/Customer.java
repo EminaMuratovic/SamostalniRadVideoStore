@@ -17,11 +17,11 @@ public class Customer {
 	
 	/**
 	 * creates a customer
-	 * @param customerId
-	 * @param customerName
-	 * @param customerSurname
-	 * @param customerPhone
-	 * @param customerEmail
+	 * @param customerId int ID of the customer
+	 * @param customerName String name of the customer
+	 * @param customerSurname String surname of the customer
+	 * @param customerPhone long phone number of the customer
+	 * @param customerEmail String e-mail of the customer
 	 */
 	public Customer(int customerId, String customerName, String customerSurname, long customerPhone, String customerEmail) {
 		this.customerId = customerId;
@@ -32,10 +32,27 @@ public class Customer {
 	}
 	
 	/**
+	 * gets the customer ID
 	 * @return the customerId
 	 */
 	public int getCustomerId() {
 		return customerId;
+	}
+	
+	/**
+	 * sets new customer email
+	 * @param customerEmail
+	 */
+	public void setCustomerEmail(String customerEmail) {
+		this.customerEmail = customerEmail;
+	}
+	
+	/**
+	 * sets new customer phone
+	 * @param customerPhone
+	 */
+	public void setCustomerPhone(long customerPhone) {
+		this.customerPhone = customerPhone;
 	}
 
 	/**
