@@ -160,7 +160,7 @@ public class VideoStore {
 	}
 	
 	/**
-	 * returns rented movie to videoStore
+	 * returns rented movie to videoStore 
 	 * @param rent Rent
 	 */
 	public void returnRentedItem(Rent rent) {
