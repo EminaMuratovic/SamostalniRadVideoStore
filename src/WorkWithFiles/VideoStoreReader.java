@@ -2,7 +2,6 @@ package WorkWithFiles;
 
 import java.io.File;
 import java.io.IOException;
-import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -23,11 +22,12 @@ import DVD.Actor;
 import DVD.Movie;
 import User.Customer;
 import User.Employee;
+import VideoStore.VideoStore;
 import Rent.Rent;
 
 /**
- * This class reads 
- * @author User
+ * This class reads data from the file VideoStore.xml
+ * @author eminamuratovic
  *
  */
 public class VideoStoreReader {
@@ -42,20 +42,22 @@ public class VideoStoreReader {
 		LinkedList<Customer> customers = new LinkedList<Customer>();
 		LinkedList<Employee> employees = new LinkedList<Employee>();
 		LinkedList<Rent> rentedItems = new LinkedList<Rent>();
+		VideoStore videoStore = new VideoStore();
 		
 		//saving customers in LinkedList
 		for(int i = 0; i < xmlcustomers.getLength(); i++) {
 			Node currentCustomer = xmlcustomers.item(i);
 			if(currentCustomer instanceof Element) {
 				Element currentCustomerEl = (Element) currentCustomer;
-				String name = currentCustomerEl.getAttribute("customerName");
+				String name = currentCustomerEl.getNodeName();
 				String surname = currentCustomerEl.getAttribute("customerSurname");
 				int ID = Integer.parseInt(currentCustomerEl.getAttribute("customerId"));
 				long phone = (long)Integer.parseInt(currentCustomerEl.getAttribute("customerPhone"));
 				String email = currentCustomerEl.getAttribute("customerEmail");
 				
 				Customer current = new Customer(ID, name, surname, phone, email);
-				customers.add(current);		
+				customers.add(current);	
+				videoStore.addCustomer(current);
 			}
 		}
 		
@@ -66,12 +68,13 @@ public class VideoStoreReader {
 				Element currentEmployeeEl = (Element) currentEmployee;
 				String name = currentEmployeeEl.getAttribute("employeeName");
 				String surname = currentEmployeeEl.getAttribute("employeeSurname");
-				int ID = Integer.parseInt(currentEmployeeEl.getAttribute("employeeId"));
+				int ID = Integer.parseInt(currentEmployeeEl.getAttribute("employeeID"));
 				long phone = (long)Integer.parseInt(currentEmployeeEl.getAttribute("employeePhone"));
 				String email = currentEmployeeEl.getAttribute("employeeEmail");
 				
 				Employee current = new Employee(ID, name, surname, phone, email);
 				employees.add(current);		
+				videoStore.addEmployee(current);
 			}
 		}
 		
@@ -82,13 +85,14 @@ public class VideoStoreReader {
 				Element currentRentedEl = (Element) currentRentedItem;
 				int movieID = Integer.parseInt(currentRentedEl.getAttribute("movieID"));
 				int customerID = Integer.parseInt(currentRentedEl.getAttribute("customerID"));
-				DateFormat df = new SimpleDateFormat("E MM dd kk:mm:ss z yyyy");
+				SimpleDateFormat df = new SimpleDateFormat("EEE MMM dd kk:mm:ss zzzz yyyy");
 				Date date = df.parse(currentRentedEl.getAttribute("date"));
-				int employeeID = Integer.parseInt(currentRentedEl.getAttribute("employeeId"));
+				int employeeID = Integer.parseInt(currentRentedEl.getAttribute("employeeID"));
 				boolean payed = Boolean.parseBoolean(currentRentedEl.getAttribute("payed"));
 				
 				Rent current = new Rent(movieID, customerID, date, employeeID, payed);
 				rentedItems.add(current);		
+				videoStore.addRentedMovie(current);
 			}
 		}
 		
@@ -115,6 +119,7 @@ public class VideoStoreReader {
 							String surname = currentActorEl.getAttribute("actorSurname");
 							
 							current.addActor(new Actor(name, surname));
+							videoStore.addMovie(current);
 						}
 					}
 				}
@@ -125,7 +130,7 @@ public class VideoStoreReader {
 				Movie tmp = iterator.next();
 				System.out.println(tmp.printMovie());
 			}
-			
+
 		}
 		
 		

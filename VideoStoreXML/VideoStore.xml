@@ -1,96 +1,21 @@
 <?xml version = "1.0"?>
 <videostore>
-<customer>
-	<customerID>1</customerID>
-	<customerName>Alma</customerName>
-	<customerSurname>Muratovic</customerSurname>
-	<customerPhone>603171665</customerPhone>
-	<customerEmail>almamuratovic@hotmail.com</customerEmail>
-</customer>
-<customer>
-	<customerID>2</customerID>
-	<customerName>Alma1</customerName>
-	<customerSurname>Muratovic1</customerSurname>
-	<customerPhone>603171665</customerPhone>
-	<customerEmail>almamuratovic@hotmail.com</customerEmail>
-</customer>
-<customer>
-	<customerID>3</customerID>
-	<customerName>Alma2</customerName>
-	<customerSurname>Muratovic2</customerSurname>
-	<customerPhone>603171665</customerPhone>
-	<customerEmail>almamuratovic@hotmail.com</customerEmail>
-</customer>
-<employee>
-	<employeeID>1</employeeID>
-	<employeeName>Safet</employeeName>
-	<employeeSurname>Muratovic</employeeSurname>
-	<employeePhone>62966922</employeePhone>
-	<employeeEmail>safetmuratovic@gmail.com</employeeEmail>
-</employee>
-<employee>
-	<employeeID>2</employeeID>
-	<employeeName>Safet1</employeeName>
-	<employeeSurname>Muratovic1</employeeSurname>
-	<employeePhone>62966922</employeePhone>
-	<employeeEmail>safetmuratovic@gmail.com</employeeEmail>
-</employee>
-<employee>
-	<employeeID>3</employeeID>
-	<employeeName>Safet2</employeeName>
-	<employeeSurname>Muratovic2</employeeSurname>
-	<employeePhone>62966922</employeePhone>
-	<employeeEmail>safetmuratovic@gmail.com</employeeEmail>
-</employee>
-<movie>
-	<title>22JumpStreet</title>
-	<genre>comedy</genre>
-	<movieID>1</movieID>
-	<rate>4</rate>
-	<actor>
-		<actorName>Angelina</actorName>
-		<actorSurname>Jolie</actorSurname>
-	</actor>
+<customer customerId = "1" customerName = "Alma" customerSurname = "Muratovic" customerPhone = "603171665" customerEmail = "almamuratovic@hotmail.com" />
+<customer customerId = "2" customerName = "Alma1" customerSurname = "Muratovic1" customerPhone = "603171665" customerEmail = "almamuratovic@hotmail.com" />
+<customer customerId = "3" customerName = "Alma2" customerSurname = "Muratovic2" customerPhone = "603171665" customerEmail = "almamuratovic@hotmail.com" />
+<employee employeeID = "1" employeeName = "Safet" employeeSurname = "Muratovic" employeePhone = "62966922" employeeEmail = "safetmuratovic@gmail.com" />
+<employee employeeID = "2" employeeName = "Safet1" employeeSurname = "Muratovic1" employeePhone = "62966922" employeeEmail = "safetmuratovic@gmail.com" />
+<employee employeeID = "3" employeeName = "Safet2" employeeSurname = "Muratovic2" employeePhone = "62966922" employeeEmail = "safetmuratovic@gmail.com" />
+<movie title = "22JumpStreet" genre = "comedy" movieID = "1" rate = "4" >
+	<actor actorName = "Angelina" actorSurname = "Jolie" />
 </movie>
-<movie>
-	<title>Mirrors</title>
-	<genre>horror</genre>
-	<movieID>2</movieID>
-	<rate>3</rate>
-	<actor>
-		<actorName>Angelina1</actorName>
-		<actorSurname>Jolie1</actorSurname>
-	</actor>
+<movie title = "Mirrors" genre = "horror" movieID = "2" rate = "3" >
+	<actor actorName = "Angelina1" actorSurname = "Jolie1" />
 </movie>
-<movie>
-	<title>Need for Speed</title>
-	<genre>action</genre>
-	<movieID>3</movieID>
-	<rate>5</rate>
-	<actor>
-		<actorName>Angelina2</actorName>
-		<actorSurname>Jolie2</actorSurname>
-	</actor>
+<movie title = "Need for Speed" genre = "action" movieID = "3" rate = "5" >
+	<actor actorName = "Angelina2" actorSurname = "Jolie2" />
 </movie>
-<rent>
-	<movieID>1</movieID>
-	<customerID>1</customerID>
-	<employeeID>1</employeeID>
-	<date>Sun Sep 05 00:00:00 CEST 3915</date>
-	<payed>true</payed>
-</rent>
-<rent>
-	<movieID>1</movieID>
-	<customerID>1</customerID>
-	<employeeID>1</employeeID>
-	<date>Sun Sep 05 00:00:00 CEST 3915</date>
-	<payed>true</payed>
-</rent>
-<rent>
-	<movieID>1</movieID>
-	<customerID>1</customerID>
-	<employeeID>1</employeeID>
-	<date>Sun Sep 05 00:00:00 CEST 3915</date>
-	<payed>true</payed>
-</rent>
+<rent movieID = "1" customerID = "1" employeeID = "1" date = "Sun Sep 05 00:00:00 CEST 3915" payed = "true" />
+<rent movieID = "1" customerID = "1" employeeID = "1" date = "Sun Sep 05 00:00:00 CEST 3915" payed = "true" />
+<rent movieID = "1" customerID = "1" employeeID = "1" date = "Sun Sep 05 00:00:00 CEST 3915" payed = "true" />
 												</videostore>

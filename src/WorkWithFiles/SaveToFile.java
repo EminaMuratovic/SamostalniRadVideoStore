@@ -13,7 +13,7 @@ import DVD.Movie;
 
 /**
  * This class saves data in the file
- * @author User
+ * @author eminamuratovic
  *
  */
 public class SaveToFile {

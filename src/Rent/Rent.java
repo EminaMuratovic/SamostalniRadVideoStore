@@ -103,13 +103,11 @@ public class Rent {
 	 */
 	public void rentToXML(OutputStream os) {
 		PrintWriter pw = new PrintWriter(os);
-		pw.println("<rent>");
-		pw.println("	<movieID>" + movieID + "</movieID>");
-		pw.println("	<customerID>" + customerID + "</customerID>");
-		pw.println("	<employeeID>" + employeeID + "</employeeID>");
-		pw.println("	<date>" + date + "</date>");
-		pw.println("	<payed>" + payed + "</payed>");
-		pw.println("</rent>");
+		pw.println("<rent movieID = \"" + movieID
+				+ "\" customerID = \"" + customerID
+				+ "\" employeeID = \"" + employeeID
+				+ "\" date = \"" + date
+				+ "\" payed = \"" + payed + "\" />");
 		pw.flush();
 	}
 }

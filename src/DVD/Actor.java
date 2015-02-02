@@ -55,10 +55,8 @@ public class Actor {
 	 */
 	public void actorToXML(Actor actor, OutputStream os) {
 		PrintWriter pw = new PrintWriter(os);
-		pw.println("<actor>");
-		pw.println("	<actorName>" + actor.actorName + "</actorName>");
-		pw.println("	<actorSurname>" + actor.actorSurname + "</actorSurname>");
-		pw.println("</actor>");
+		pw.println("<actor actorName = \"" + actor.actorName
+				+ "\" actorSurname = \"" + actor.actorSurname + "\" />");
 		pw.flush();
 	}
 	

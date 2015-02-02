@@ -85,18 +85,13 @@ public class Movie {
 	 */
 	public void movieToXML(OutputStream os) {
 		PrintWriter pw = new PrintWriter(os);
-		pw.println("<movie>");
-		pw.println("	<title>" + title + "</title>");
-		pw.println("	<genre>" + genre + "</genre>");
-		pw.println("	<movieID>" + movieID + "</movieID>");
-		pw.println("	<rate>" + rate + "</rate>");
+		pw.println("<movie title = \"" + title
+				+ "\" genre = \"" + genre
+				+ "\" movieID = \"" +movieID
+				+ "\" rate = \"" + rate + "\" >");
 		for (int i = 0; i < size; i++) {
-			pw.println("	<actor>");
-			pw.println("		<actorName>" + actors[i].getActorName()
-					+ "</actorName>");
-			pw.println("		<actorSurname>" + actors[i].getActorSurname()
-					+ "</actorSurname>");
-			pw.println("	</actor>");
+			pw.println("	<actor actorName = \"" + actors[i].getActorName()
+					+ "\" actorSurname = \"" + actors[i].getActorSurname() + "\" />");
 		}
 		pw.println("</movie>");
 		pw.flush();

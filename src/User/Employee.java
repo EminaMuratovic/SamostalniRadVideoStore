@@ -59,13 +59,11 @@ public class Employee {
 	 */
 	public void employeeToXML(OutputStream os) {
 		PrintWriter pw = new PrintWriter(os);
-		pw.println("<employee>");
-		pw.println("	<employeeID>" + empleyeeId + "</employeeID>");
-		pw.println("	<employeeName>" + employeeName + "</employeeName>");
-		pw.println("	<employeeSurname>" + employeeSurname + "</employeeSurname>");
-		pw.println("	<employeePhone>" + employeePhone + "</employeePhone>");
-		pw.println("	<employeeEmail>" + employeeEmail + "</employeeEmail>");
-		pw.println("</employee>");
+		pw.println("<employee employeeID = \"" + empleyeeId
+				+ "\" employeeName = \"" + employeeName
+				+ "\" employeeSurname = \"" + employeeSurname
+				+ "\" employeePhone = \"" + employeePhone
+				+ "\" employeeEmail = \"" + employeeEmail + "\" />");
 		pw.flush();
 	}
 	
