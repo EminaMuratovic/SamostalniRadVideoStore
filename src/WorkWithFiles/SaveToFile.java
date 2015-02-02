@@ -20,28 +20,32 @@ public class SaveToFile {
 	@SuppressWarnings("deprecation")
 	public static void main(String[] args) {
 		
+		//actors
 		Actor actor1 = new Actor("Angelina", "Jolie");
 		Actor actor2 = new Actor("Angelina1", "Jolie1");
 		Actor actor3 = new Actor("Angelina2", "Jolie2");
 		
-		
+		//employees
 		Employee employee1 = new Employee(1, "Safet", "Muratovic", 62966922, "safetmuratovic@gmail.com");
 		Employee employee2 = new Employee(2, "Safet1", "Muratovic1", 62966922, "safetmuratovic@gmail.com");
 		Employee employee3 = new Employee(3, "Safet2", "Muratovic2", 62966922, "safetmuratovic@gmail.com");
 	
+		//customers
 		Customer customer1 = new Customer(1, "Alma", "Muratovic", 603171665, "almamuratovic@hotmail.com");
 		Customer customer2 = new Customer(2, "Alma1", "Muratovic1", 603171665, "almamuratovic@hotmail.com");
 		Customer customer3 = new Customer(3, "Alma2", "Muratovic2", 603171665, "almamuratovic@hotmail.com");
 		
+		//movies
 		Movie movie1 = new Movie(1, "22JumpStreet", "comedy", 4);
 		Movie movie2 = new Movie(2, "Mirrors", "horror", 3);
 		Movie movie3 = new Movie(3, "Need for Speed", "action", 5);
+		
 		
 		movie1.addActor(actor1);
 		movie2.addActor(actor2);
 		movie3.addActor(actor3);
 		
-	
+		//rented items
 		Rent rent1 = new Rent(movie1.getMovieID(), customer1.getCustomerId(), new Date(2015, 8, 5), employee1.getEmpleyeeId(), true);
 		Rent rent2 = new Rent(movie1.getMovieID(), customer1.getCustomerId(), new Date(2015, 8, 5), employee1.getEmpleyeeId(), true);
 		Rent rent3 = new Rent(movie1.getMovieID(), customer1.getCustomerId(), new Date(2015, 8, 5), employee1.getEmpleyeeId(), true);
