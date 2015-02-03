@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Iterator;
 import java.util.LinkedList;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -125,15 +124,8 @@ public class VideoStoreReader {
 				}
 			}
 			
-//			//prints movies in the videoStore
-//			Iterator<Movie> iterator = movies.iterator();
-//			while(iterator.hasNext()) {
-//				Movie tmp = iterator.next();
-//				System.out.println(tmp.printMovie());
-//			}
 
 		}
-		
 		
 		
 		

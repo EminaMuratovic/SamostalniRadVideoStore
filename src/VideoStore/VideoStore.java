@@ -243,5 +243,51 @@ public class VideoStore {
 		pw.flush();
 		
 	}
+	
+	/**
+	 * prints all customers in the videostore
+	 * @return string
+	 */
+	public String printCustomers() {
+		String str = "";
+		for(int i = 0; i < sizeCustomer; i++) {
+			str += customers[i].printCustomer();
+		}
+		return str;
+	}
+	
+	/**
+	 * prints all movies in the videostore
+	 * @return string
+	 */
+	public String printMovies() {
+		String str = "";
+		for(int i = 0; i < sizeMovie; i++)
+			str += movies[i].printMovie();
+		return str;
+	}
+	
+	/**
+	 * print employees in the videostore
+	 * @return string
+	 */
+	public String printEmployees() {
+		String str = "";
+		for(int i = 0; i < sizeEmployee; i++) 
+			str += employees[i].printEmployee();
+		return str;
+	}
+	
+	/**
+	 * print all rented movies in the videostore
+	 * @return string
+	 */
+	public String printRentedMovies() {
+		String str = "";
+		for(int i = 0; i < sizeRent; i++)
+			str += rentedMovies[i].printRented();
+		return str;
+			
+	}
 
 }
