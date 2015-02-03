@@ -121,6 +121,22 @@ public class VideoStore {
 	}
 	
 	/**
+	 * removes movie from videostore
+	 * @param movie Movie
+	 */
+	public void removeMovie(Movie movie) {
+		for(int i = 0; i < sizeMovie; i++) {
+			if(movies[i] == movie) {
+				for(int j = i; j < sizeMovie; j++)
+					movies[j] = movies[j + 1];
+				break;
+			}
+		}
+		sizeMovie--;
+			
+	}
+	
+	/**
 	 * resizes movie array
 	 */
 	private void resizeMovie() {
@@ -146,7 +162,7 @@ public class VideoStore {
 			}
 		}
 		sizeRent++;
-		sizeMovie--;
+		//sizeMovie--;
 	}
 	
 	/**
@@ -172,7 +188,7 @@ public class VideoStore {
 			}
 		}
 		sizeRent--;
-		sizeMovie++;
+		//sizeMovie++;
 	}
 	
 	/**
